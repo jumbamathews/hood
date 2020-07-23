@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+<div class="container">
+
+  {% if businesses %}
+  <div class="row my-4">
+      {% for business in businesses %}
+      <div class="col-md-6 mb-3">
+          <div class="card bg-light">
+              <div class="card-body">
+                  <h3 class="card-title" style="text-decoration:underline;">{{business.name}}</h3>
+                  <p class="card-text">{{business.description}}</p>
+                  <p class="card-text">Posted by: {{business.user.username}}</p>
+                  <p class="card-text">Contact: {{business.email}}</p>
+              </div>
+          </div>
+      </div>
+      {% endfor%}
+  </div>
+  {% else %}
+      <h2 class="text-center">No businesses.</h2>
+  {% endif %}
+  <a href="{% url 'new-business' %}"><button class="btn-primary">New Business</button></a>
+
+</div>
+
+
+{% endblock %}

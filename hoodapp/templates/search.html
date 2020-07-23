@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+  <h3>Results for: {{message}}</h3>
+
+  {% if results %}
+  <div class="row my-4">
+      {% for business in results %}
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-body">
+                  <h3 class="card-title" style="text-decoration:underline;">{{business.name}}</h3>
+                  <p class="card-text">{{business.description}}</p>
+                  <p class="card-text">Posted by: {{business.user.username}}</p>
+                  <p class="card-text">Contact: {{business.email}}</p>
+              </div>
+          </div>
+      </div>
+      {% endfor%}
+  </div>
+  {% else %}
+      <h2 class="text-center">No match.</h2>
+  {% endif %}
+
+</div>
+
+{% endblock %}

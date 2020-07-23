@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+
+    {% if posts %}
+    <div class="row my-4">
+        {% for post in posts%}
+        <div class="col-md-6 mb-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h2 class="card-title">{{post.title}}</h2>
+                    <p class="card-text">{{post.content | truncatechars:150}}</p>
+                    <a href="{% url 'post' post.id %}"><button  class="btn-secondary">More...</button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+    {% else %}
+        <h2 class="text-center">There are no posts.</h2>
+    {% endif %}
+    <a href="{% url 'new-post' %}"><button class="btn-primary">New Post</button></a>
+</div>
+{% endblock %}
