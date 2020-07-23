@@ -2,11 +2,11 @@
 
 This is web application that allows you to be in the loop about everything happening in your neighborhood. 
 
-## Created by [finaclemence15](https://github.com/finaclemence15)
+## Created by [mathews jumba](https://github.com/jumbamathews)
 
 ## Date
 
-4/11/2019
+4/11/2020
 
 ### Description
 
@@ -58,8 +58,8 @@ Open the app on your browser, by default on ``` http://127.0.0.1:8000/ ```
 
 ## Support and contact details
 
-+ Email:finaclemence15@gmail.com
++ Email:jumba@jumba.me
 
 ## License
 
-Copyright (c) All right reserved 2019
+Copyright (c) All right reserved 2020
