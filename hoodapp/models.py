@@ -7,11 +7,11 @@ from django.dispatch import receiver
 # Create your models here.
 class Neighborhood(models.Model):
     LOCATIONS = (
-    ('Nyarugenge','Kimisagara',),
-    ('Kicukiro','Kagarama'),
-    ('Gasabo', 'Kimihurura'),
-    ('kayonza', 'Gahini'),
-    ('Rwamagana', 'Nyakariro'),
+    ('Parklands','Nairobi',),
+    ('highridge','Nairobi'),
+    ('karen', 'Nairobi'),
+    ('Mata', 'Nairobi'),
+    ('Eastleigh', 'Nairobi'),
     )
     name = models.CharField(max_length = 30, null=True)
     hood_image = models.ImageField(upload_to='images/', null=True,blank=True)
