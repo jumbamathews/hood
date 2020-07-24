@@ -34,7 +34,7 @@ STATICFILES_DIRS = (
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's*zyt)u&51b1ye=uvl_5%h-0+%o+ev3!08l*)cb+jf!5ppcs8k'
+SECRET_KEY = 's*zyt)u&51b1ye=uvl_5%h-0+%o+ev3!08l*)cb+jf!5ppc5s8k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -123,8 +123,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'hood',
-#         'USER': 'clemence',
-#     'PASSWORD':'34003',
+#         'USER': 'postgres',
+#     'PASSWORD':'Code2Live==3000',
 #     }
 # }
 
@@ -152,7 +152,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Kigali'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -179,3 +179,5 @@ EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+django_heroku.settings(locals())
